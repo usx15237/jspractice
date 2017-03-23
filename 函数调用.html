@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<script>
+	function say()/*定义函数*/
+	{
+	alert("hi");
+	}
+	</script>
+</head>
+<body>
+		<input type="button" value="点击我,会发生函数调用" onclick="say()">	
+		<input type="button" id="butto" value="点击我,也会发生函数调用">
+		<script>
+   (function()
+    {
+  var bu=document.getElementById("butto");
+  bu.onclick=function()/*调用函数*/
+  {
+    say();
+  }
+})();
+
+    </script>	
+</body>
+</html>

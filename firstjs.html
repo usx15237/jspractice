@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+</head>
+<body>
+  <p id="cin" class="one">hello world</p>
+  <script>
+	alert("hello");
+    var cc=document.getElementById("cin");/*双引号，不是单引号*/
+	cc.innerHTML="new world";/*如果这个<script>写在<head>中，便无效果，即 必须先出现id,再查找id*/    
+    cc.style.color="red";/*在<script>中写样式，注意和CSS不一样，“=”加双引号*/
+     cc.id="cout";/*可读可写*/
+    cc.className="two";
+    document.write(cc.id+"<br>");
+    document.write(cc.className);
+   
+	</script>	
+</body>
+</html>

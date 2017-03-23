@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+	<script>
+	function validateForm()
+	{
+    if(checkname())
+    return true;
+    else
+    return false;
+	}	
+	function checkname()
+	{
+	if(form.name.value.length>0)
+    return true;
+    else 
+    {
+    alert("输入内容不得为空");
+    document.form.name.focus();//使得光标聚焦在输入框中
+    document.getElementById("hint").innerHTML="输入有误,请重新输入";
+    return false;
+	}		
+	}
+	</script>
+</head>
+<body>
+	<form action="" name="form" onsubmit="return validateForm()">
+	请输入姓名:<input type="text" name="name">
+	<p id="hint"></p>
+	<input type="submit" value="提交">
+	</form>
+</body>
+</html>

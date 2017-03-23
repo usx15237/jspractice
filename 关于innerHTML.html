@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+	<ul id="ull">
+	<li>待到京城九月八*<span>我花开后百花杀;</span>满城尽带黄金甲.</li>	
+	</ul>
+	<script>
+	var ul=document.getElementById("ull");
+	var li=ul.children[0];
+	var span=li.children[0];/*返回一个子元素数组*/
+    var spl=li.innerHTML.split("八");/*返回一个字符串数组，"xxxx,xxxx"的形式*/
+	alert(ul.innerHTML);	
+    alert(li.innerHTML);
+    alert(span.innerHTML);
+    alert(spl);
+	</script>
+</body>
+</html>
